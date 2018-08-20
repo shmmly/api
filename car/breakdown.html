@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>故障上传 | 移动端接口整理</title>
+    <meta name="description" content="三端的接口展示">
+    
+    
+    <link rel="preload" href="/api/assets/css/0.styles.4dfba6d0.css" as="style"><link rel="preload" href="/api/assets/js/app.830f4563.js" as="script"><link rel="preload" href="/api/assets/js/10.94e963c1.js" as="script"><link rel="prefetch" href="/api/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/api/assets/js/3.814d7077.js"><link rel="prefetch" href="/api/assets/js/4.1f145693.js"><link rel="prefetch" href="/api/assets/js/5.7df941d0.js"><link rel="prefetch" href="/api/assets/js/6.4a830c9f.js"><link rel="prefetch" href="/api/assets/js/7.809f870e.js"><link rel="prefetch" href="/api/assets/js/8.7eee8cce.js"><link rel="prefetch" href="/api/assets/js/9.6ee50555.js"><link rel="prefetch" href="/api/assets/js/11.7eaab9c7.js"><link rel="prefetch" href="/api/assets/js/12.516dbdf1.js"><link rel="prefetch" href="/api/assets/js/13.41739598.js"><link rel="prefetch" href="/api/assets/js/14.14f7c3bf.js"><link rel="prefetch" href="/api/assets/js/15.c82ca8e0.js"><link rel="prefetch" href="/api/assets/js/16.cd7f9460.js"><link rel="prefetch" href="/api/assets/js/17.be9dad53.js"><link rel="prefetch" href="/api/assets/js/18.a257c95f.js"><link rel="prefetch" href="/api/assets/js/19.2f4ea6e8.js"><link rel="prefetch" href="/api/assets/js/20.f7d5d95c.js"><link rel="prefetch" href="/api/assets/js/21.96d2de30.js">
+    <link rel="stylesheet" href="/api/assets/css/0.styles.4dfba6d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/api/" class="home-link router-link-active"><!----> <span class="site-name">移动端接口整理</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/api/user/" class="nav-link">用户端</a></div><div class="nav-item"><a href="/api/approve/" class="nav-link">审批端</a></div><div class="nav-item"><a href="/api/car/" class="nav-link router-link-active">司机</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/api/user/" class="nav-link">用户端</a></div><div class="nav-item"><a href="/api/approve/" class="nav-link">审批端</a></div><div class="nav-item"><a href="/api/car/" class="nav-link router-link-active">司机</a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>司机端</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/api/car/" class="sidebar-link">首页</a></li><li><a href="/api/car/taskDetail.html" class="sidebar-link">任务列表</a></li><li><a href="/api/car/leave.html" class="sidebar-link">请假</a></li><li><a href="/api/car/breakdown.html" class="active sidebar-link">故障上传</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/car/breakdown.html#故障上传接口" class="sidebar-link">故障上传接口</a></li><li class="sidebar-sub-header"><a href="/api/car/breakdown.html#故障上传记录接口" class="sidebar-link">故障上传记录接口</a></li><li class="sidebar-sub-header"><a href="/api/car/breakdown.html#故障详情接口" class="sidebar-link">故障详情接口</a></li></ul></li><li><a href="/api/car/message.html" class="sidebar-link">消息</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="故障上传"><a href="#故障上传" aria-hidden="true" class="header-anchor">#</a> 故障上传</h1> <h2 id="故障上传接口"><a href="#故障上传接口" aria-hidden="true" class="header-anchor">#</a> 故障上传接口</h2> <p><strong>功能：</strong>
+上传故障详情</p> <p>-提供参数：司机id、故障等级、故障描述、该故障图片
+-返回结果：true/false</p> <h2 id="故障上传记录接口"><a href="#故障上传记录接口" aria-hidden="true" class="header-anchor">#</a> 故障上传记录接口</h2> <p><strong>功能：</strong>
+历史故障列表F</p> <p>-提供参数：司机id
+-返回结果：上传时间，故障id，故障级别</p> <h2 id="故障详情接口"><a href="#故障详情接口" aria-hidden="true" class="header-anchor">#</a> 故障详情接口</h2> <p><strong>功能：</strong>
+故障详情</p> <p>-提供参数：故障id
+-返回结果：故障级别，故障描述，图片，上传时间，状态</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/api/car/leave.html" class="prev">
+          请假
+        </a></span> <span class="next"><a href="/api/car/message.html">
+          消息
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/api/assets/js/10.94e963c1.js" defer></script><script src="/api/assets/js/app.830f4563.js" defer></script>
+  </body>
+</html>
